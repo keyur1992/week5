@@ -1,79 +1,156 @@
-
+<?php include 'validation.php';?>
 <!DOCTYPE html>
 <html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Movie Recommendation</title>
+	<link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/colorbox.css" type="text/css" media="all" />
+	
+	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<script src="js/jquery.colorbox-min.js" type="text/javascript"></script>
+	<!--[if lt IE 9]>
+		<script src="js/modernizr.custom.js"></script>
+	<![endif]-->
+	<script src="js/functions.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- wrapper -->
+	<div id="wrapper">
+		<div class="light-bg">
+			<!-- shell -->
+			<div class="shell">
+				<!-- header -->
+				<div class="header">
+					<!-- socials -->
+					<div class="socials">
+						<a href="#" class="facebook-ico">facebook-ico</a>
+						<a href="#" class="twitter-ico">twitter-ico</a>
+						<a href="#" class="you-tube-ico">you-tube-ico</a>
+					</div>
+					<!-- end of socials -->
+					<h1 id="logo"><a href="#">Movie</a></h1>
+					<!-- navigation -->
+					<nav id="navigation">
+						<ul>
+							<li><a href="index.php">MOVIE REVIEWS</a></li>
+														<li><a href="update.php">MOST COMMENTED REVIEW LIST</a></li>
 
-    <head>
+							<li><a href="#">LATEST MOVIES <span>20</span></a></li>
+						</ul>
+					</nav>
+					<!-- end of navigation -->
+					<div class="cl">&nbsp;</div>
+				</div>
+				<!-- end of header -->
+				<!-- main -->
+				<div class="main">
+					<!-- content -->
+					<section class="content">
+						<!-- post -->
+						<div class="post">
+							<!-- post-inner -->
+							<div class="post-inner">
+								<header>
+									<h2><a href="#">Movie Recommendations</a></h2>
+									<div class="cl">&nbsp;</div>
+								</header>
+								
+								
+								
+								<!-- end of meta -->
+								<!-- post-cnt -->
+								<div class="post-cnt">
+								
+								
+								
+								
+									<form action="thankyou.php" method="post">
+  Title:<br>
+  <input type="text" name="title" required><br>
+  <span class="error"><?php echo $titleError;?></span>
+ 
+  Release Date:<br>
+  <input type="date" name="release_date" required><br>
+  <span class="error"><?php echo $release_dateError;?></span>
 
-        <meta charset="utf-8">
-        <title>Parents Queries</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+Duration:<br>
+  <input type="text" name="duration" required><br>
+  <span class="error"><?php echo $durationError;?></span>
+  
+  Genre:<br>
+  <input type="text" name="genre" required><br>
+  <span class="error"><?php echo $genreError;?></span>
+  
+  Synopsis:<br>
+  <textarea type="text" name="synopsis" required></textarea><br>
+  <span class="error"><?php echo $synopsisError;?></span>
 
-        <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+<input type="submit" value="Submit"><br>
+<span class="success"><?php echo $successMessage;?></span>
 
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 
-    </head>
 
-    <body>
+</form>
 
-        <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="logo span4">
-                        <h1><a href="">Parents Enquiry Form <span class="red">.</span></a></h1>
-                    </div>
-                    <div class="links span8">
-                        <a class="home" href="index.php" rel="tooltip" data-placement="bottom" data-original-title="Home"></a>
-                        <a class="blog" href="update.php" rel="tooltip" data-placement="bottom" data-original-title="Update Feedback"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+							</div>
+								<!-- end of post-cnt -->
+							</div>
+							<!-- post-inner -->
+						</div>
+						<!-- end of post -->
+						<!-- post -->
+							<!-- post-inner -->
+						
+						<!-- end of post -->
+						<!-- post -->
+						
+						<!-- end of post -->
+						
+					</section>
+					<!-- end of content -->
+					<!-- sidebar -->
+					<aside class="sidebar">
+						
 
-        <div class="register-container container">
-            <div class="row">
-                <div class="iphone span5">
-                    <img src="assets/img/iphone.png" alt="">
-                </div>
-                <div class="register span6">
-                      <form action="thankyou.php" method="post">
-                        <h2>  <span class="red"><strong>Contact US</strong></span></h2>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your Name...">
-                        
-						<label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Enter your Email...">
-						<label for="add">Address</label>
-                        <input type="text" id="add" name="add" placeholder="Enter your Address...">
-						<label for="city">City</label>
-                        <input type="text" id="city" name="city" placeholder="Enter your City...">
-						<label for="state">State</label>
-                        <input type="text" id="state" name="state" placeholder="Enter your State...">
-                        <label for="feedback">Comments</label>
-                        <input type="text" id="feedback" name="feedback" placeholder="Enter your Comments...">
-                        
-                        <button type="submit" value="submit">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+						<div class="widget">
+							<h3 class="widgettitle">Opening This Week</h3>
+							<ul>
+								<li><a href="#">The Hunter Games <strong>$98 Mil</strong></a></li>
+								<li><a href="#">American Reunion <strong>$50 Mil</strong></a></li>
+								<li><a href="#">Titanic <strong>$23 Mil</strong></a></li>
+								<li><a href="#">Wrath of the Titans <strong>$50 Mil</strong></a></li>
+								<li><a href="#">Mirror Mirro  <strong>$7 Mil</strong></a></li>
+							</ul>
+						</div>
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.8.2.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
+						
+					</aside>
+					<!-- end of sidebar -->
+					<div class="cl">&nbsp;</div>
+				</div>
+								<br>
+				<br>
+				<br>
+				<br>
 
-    </body>
-
+				<!-- end of main -->
+				<div class="footer">
+					<!--<nav class="footer-nav">
+						<ul>
+							<li><a href="#">Show All</a></li>
+							<li><a href="#">Latest Movies</a></li>
+							<li><a href="#">Top Rated</a></li>
+							<li><a href="#">Most Commented</a></li>
+						</ul>
+					</nav>-->
+					<p class="copy">Student @ UTS <span>|</span> 2017 </p>
+				</div>
+			</div>
+			<!-- end of shell -->
+		</div>	
+	</div>
+	<!-- end of wrapper -->
+</body>
 </html>
-
